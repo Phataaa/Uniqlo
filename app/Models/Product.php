@@ -22,8 +22,8 @@ class Product extends Model
     public function feedback() {
         return $this -> hasMany('App\Models\Feedback');
     }
-    public function cart() {
-        return $this -> hasMany('App\Models\Cart');
+    public function cartDetail() {
+        return $this -> hasMany('App\Models\CartDetail');
     }
     public function sizeRelative() {
         return $this -> hasMany('App\Models\SizeRelative');
@@ -34,8 +34,8 @@ class Product extends Model
     public function shopRelative() {
         return $this -> hasMany('App\Models\ShopRelative');
     }
-    public function order() {
-        return $this -> hasOne('App/Models/Order');
+    public function orderDetail() {
+        return $this -> hasOne('App/Models/OrderDetail');
     }
     protected $fillable = ['name', 'description', 'overview', 'metetial', 'category_id']; 
 }
